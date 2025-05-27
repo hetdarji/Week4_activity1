@@ -2,7 +2,7 @@ import os
 import requests
 
 api_key = os.getenv("WEATHER_API_KEY")
-city = "Toronto"
+city = "New York"
 
 if not api_key:
     print("No API key found in environment.")
