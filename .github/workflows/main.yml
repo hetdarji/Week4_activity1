@@ -22,7 +22,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
-      - name: Run with hardcoded API key
-        run: |
-          export WEATHER_API_KEY="9f780397eccf0e9bcc6b76f7c31858e5"
-          python weather.py
+      - name: Run with API key from secret
+        env:
+            WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+        run: | 
+              python weather.py
