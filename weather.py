@@ -22,3 +22,4 @@ try:
     print(f"Temperature: {temp}°C")
 except Exception as e:
     print("Error fetching weather data:", e)
+
