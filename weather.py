@@ -18,7 +18,7 @@ try:
     weather = data["weather"][0]["description"]
     temp = data["main"]["temp"]
 
-    print(f"Weather in {city}: {Toronto}")
+    print(f"Weather in {city}: {weather}")
     print(f"Temperature: {temp}°C")
 except Exception as e:
     print("Error fetching weather data:", e)
