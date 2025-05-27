@@ -8,7 +8,7 @@ if not api_key:
     print("No API key found in environment.")
     exit(1)
 
-url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
+url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
 
 try:
     response = requests.get(url)
@@ -18,7 +18,7 @@ try:
     weather = data["weather"][0]["description"]
     temp = data["main"]["temp"]
 
-    print(f"Weather in {city}: {NewYork}")
+    print(f"Weather in {city}: {Toronto}")
     print(f"Temperature: {temp}°C")
 except Exception as e:
     print("Error fetching weather data:", e)
