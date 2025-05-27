@@ -8,7 +8,7 @@ if not api_key:
     print("No API key found in environment.")
     exit(1)
 
-url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
+url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
 
 try:
     response = requests.get(url)
